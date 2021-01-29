@@ -3,7 +3,6 @@ package com.github.abugnais.crawler;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import javax.print.Doc;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -73,20 +72,20 @@ public class Crawler {
     }
 
     private Set<String> getScripts(Document document) {
-        return document.select("script[src]")
-                .stream().map(it -> it.absUrl("src"))
+        return document.select("script[src]").stream()
+                .map(it -> it.absUrl("src"))
                 .collect(Collectors.toSet());
     }
 
     private Set<String> getStyles(Document document) {
-        return document.select("link[rel=stylesheet][href]")
-                .stream().map(it -> it.absUrl("href"))
+        return document.select("link[rel=stylesheet][href]").stream()
+                .map(it -> it.absUrl("href"))
                 .collect(Collectors.toSet());
     }
 
     private Set<String> getUrls(Document document) {
-        return document.select("a[href]")
-                .stream().map(it -> it.absUrl("href"))
+        return document.select("a[href]").stream()
+                .map(it -> it.absUrl("href"))
                 .collect(Collectors.toSet());
     }
 

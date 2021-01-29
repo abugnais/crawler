@@ -22,7 +22,8 @@ public class Page {
     public String toString() {
         return "page url: " + url + "\n" +
                 "style sheets: " + String.join(",", styles) + "\n" +
-                "script files: " + String.join(",", scripts) + "\n\n";
+                "script files: " + String.join(",", scripts) + "\n\n" +
+                "children: " + String.join(",", children);
     }
 
     public String getUrl() {
@@ -46,7 +47,10 @@ public class Page {
         if (this == o) return true;
         if (!(o instanceof Page)) return false;
         Page page = (Page) o;
-        return getUrl().equals(page.getUrl()) && getStyles().equals(page.getStyles()) && getScripts().equals(page.getScripts()) && getChildren().equals(page.getChildren());
+        return getUrl().equals(page.getUrl()) &&
+                getStyles().equals(page.getStyles()) &&
+                getScripts().equals(page.getScripts()) &&
+                getChildren().equals(page.getChildren());
     }
 
     @Override
