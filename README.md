@@ -1,13 +1,17 @@
 # Simple Web Crawler
 Built using java11 and maven
 
-## Build
+### Build
 ```
 git clone 
-mvn clean install
+mvn clean package
 ```
-## Test
+### Test
 ```
 mvn test
 ```
 
+### Usage
+```
+cd target && java -jar crawler.jar https://cuvva.com
+```
