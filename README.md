@@ -3,7 +3,8 @@ Built using java11 and maven
 
 ### Build
 ```
-git clone 
+git clone https://github.com/abugnais/crawler.git
+cd crawler
 mvn clean package
 ```
 ### Test
